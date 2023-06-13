@@ -42,7 +42,7 @@ body {
 }
 
 #avstys p strong {
-  color: #e1774a;
+  color: #019ff6;
   font-size: 15px;
 }
 #avstys{
@@ -52,7 +52,7 @@ body {
     margin-bottom: 10px;
 }
 #avstys h2 {
-  color: #e1774a;
+  color: #019ff6;
 }
 #avstys p strong::before {
   content: "|";
