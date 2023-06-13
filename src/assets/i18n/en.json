@@ -1,0 +1,298 @@
+{
+    "titre":"MNC official website",
+    "home_rejoindre":"JOIN THE CLUSTER NOW",
+    "navbar":{
+        "home":"Home",
+        "cluster":{
+            "title":"Cluster",
+            "mission":"Our missions",
+            "succes":"Our definition of success",
+            "team":"Team MNC",
+            "organisation":"Our organisation"
+        },
+        "expertise":{
+            "title":"Our expertise",
+            "services":"Our services",
+            "project":"Our projects",
+            "programmes":"Our programs",
+            "Fiware":"Fiware"
+        },
+        "lang":{
+            "title":"Languages",
+            "fr":"French",
+            "en":"English"
+        },
+        "partentaires":{
+            "title":"Partners",
+            "inst" : "Public Institutions And Organizations",
+            "ge":"Large Companies",
+            "univ": "Universities And Research Institutes",
+            "pi":"International Partners",
+            "sup":"Srart UPS & PME",
+            "assioc":"Associations"
+        },
+        "rejcluster":{
+            "title":"Join",
+            "pq" : "Why Join Us?",
+            "bc":"Contribution Scale",
+            "formad": "Membership Form",
+            "carr":"Career"
+    }  ,
+    "actualites":{
+        "title":"News",
+        "event":"Events",
+        "presse":"Press release",
+        "blog":"Blog",
+        "media":"mediatech"
+    },
+    "joinbutton":"Join the cluster"
+    },
+    "home_actualite":{
+        "mnc":"Maroc Numeric Cluster",
+        "button":"Read more",
+        "titre":"titre_en",
+        "post":"post_en"
+    },
+    "missions":{
+        "titre":"titre_en",
+        "desc" :"description_en"
+    },
+    "projets":{
+        "titre":"titre_en",
+        "desc" :"description_en"
+    },
+    "success":{
+        "ligne1":"ligne1_en",
+        "ligne2":"ligne2_en",
+        "ligne3":"ligne3_en",
+        "ligne4":"ligne4_en"
+    },
+    "team":{
+        "ligne1":"Our management team, with rich and complementary experiences, wears the same values:",
+        "ligne2":"Diversity, transparency, collaboration, results and collective good.",
+        "bio":"bio_en"
+    }, 
+    "memberprofil":{
+        "team_bio":"team_bio_en",
+        "description":"description_en",
+        "parcours":"parcours_en",
+        "linkedin":"Your LinkedIn Profile",
+        "video":"Videos : ",
+        "descrip":"Description : "
+    },
+    "joinus":{
+        "titre":"titre_en",
+        "desc" :"description_en"
+    },
+    "cotisation":{
+        "payement":"Payment choice",
+        "mmbre":"Member Category",
+        "cot":"Contribution",
+        "scot":"Support contribution*",
+        "catmembre":"Categorie_membre_en",
+        "req":"Remarques_en"
+    },
+    "partenaires":{
+        "type":"type_en"
+    },
+    "events":{
+        "titre": "titre_en",
+        "thematique" :"thematique_en",
+        "post" : "post_en",
+        "plus" : "More"
+    },
+    "services":{
+        "type":"intitule_en",
+        "titre":"nom_en",
+        "desc":"description_en",
+        "avantage":"Avantages_members_en",
+        "av_title":"Members Advantages"
+    },
+    "quisomme":{
+        "description":"description_mnc_en",
+        "nb1":"Accompanied projects",
+        "nb2":"International partnerships",
+        "nb3":"Members",
+        "nb4":"Realized events",
+        "nb5":"Millions of investments made",
+        "pls":"More than"
+    },
+    "footer":{
+        "mnc":"MNC is a mixed public-private governance structure that promotes digital innovation.",
+        "insc":"Subscribe for our newsletter to stay up to date with MNC news",
+        "insc_title":"Subscribe :",
+        "btn_insc":"subscribe",
+        "cnt_title":"Contact us :",
+        "news":"News :",
+        "copy":" MNC. All rights reserved.",
+        "whosus":"Who are we?",
+        "m":"Mediatech",
+        "done":"Thank you for your registration",
+        "notdone":"This email is already registred"
+
+    },"contact":{
+        "adresse":"adresse_en"
+    },
+    "search":{
+        "msg":"No results"
+    },
+    "fiware":{
+        "titre":"Titre_en",
+        "hint":"hint_en",
+        "desc" :"Description_en",
+        "homedesc":"is an independent open source community that aims to build an open and sustainable ecosystem around public, royalty-free, and implementation-oriented software platform standards that will drive the development of new smart applications."
+      },
+      "fiwarecomponents":{
+        "titre":"titre_en",
+        "desc" :"description_en"
+      },
+      "fiwaresectors":{
+        "label":"label_en"
+      },
+      "program":{
+        "titre":"titre_en",
+        "hint":"hint_en",
+        "desc" :"description_en"
+      },
+      "fiwareprogram":{
+        "desc" :"description_en"
+      },
+      "adhesionForm":{
+        "form1":{
+            "nom": "Name of the entreprise",
+            "nomSponsor": "Name of the sponsor",
+            "organisation":"Organization",
+            "fonction": "Function",
+            "h2": "Organization Name and Sponsorship",
+            "t1": "The adhering body must be sponsored by a member of the cluster"     
+          },
+          "form2":{
+              "NomPrenom": "last, First name",
+              "fonction": "Function",
+              "phone":"Phone",
+              "fax": "Fax",
+              "email":"E-mail",
+              "h2": "Contacts in your organization",
+              "t1": "Contact for Maroc Numeric Cluster (specify the main contact person for meetings, participation in projects, contact person on subjects related to the Cluster, etc.)",
+              "t2": "Administrative manager (Contribution, staff, turnover, general information ...)",
+              "t3": "Legal manager if different from the administrative manager (Participation in general meetings ...)"            
+          },
+          "Form3":{
+              "h2": "Identity card of your organization",
+              "t1": "Select the type of organization",
+              "org1": "ICT company",
+              "org2": "Association",
+              "org3": "Institutional",
+              "org4": "Research Institute",
+              "org5": "Teaching institute",
+              "org6": "Other",
+              "t2": "If other, please specify the type :", 
+              "specifier" : "specify",
+              "t3": "Headquarters location :",
+              "adresse": "Addresse  :",
+              "code": "Postal Code :",
+              "ville": "City :",
+              "lien": "Web Link :",
+              "creation": "year of creation :",
+              "effectif": "Global workforce :", 
+              "capital": "Turnover in DH (2018 and 2019) :",
+              "formelegal": "Legal form :",
+              "registreC": "Commercial register N° :",
+              "patente": "Patent N° :",
+              "idFiscal": "Tax identification :",
+              "t4": "Describe the core business of your business and the target markets. This text may be intended to be published in the various media: Cluster newsletter, website, directory ... ",
+              "activite": "Activity  :",
+              "t5": "I authorize the publication of this text on the Cluster's communication medium (Website, Newsletter ...)",
+              "oui": "Yes",
+              "non": "No"
+          },
+          "Form4":{
+              "h2": "Links with Maroc Numeric Cluster",
+              "t1": "Which thematic committees would you like to interact with?",
+              "theme1": "Digital Company",
+              "theme2": "Big Data",
+              "theme3": "Smart City",
+              "theme4": "Smart Education",
+              "theme5": "Multichannel",
+              "theme6": "Multimedia",
+              "theme7": "Internet Of Things",
+              "theme8": "Security & Cloud",
+              "theme9": "Mobile",
+              "attenteMNC": "Expectations vis-à-vis Maroc Numeric Cluster",
+              "attente": "Expectations  :"
+          },
+          "Form5": {
+              "h2": "Payment of contributions",
+              "t1": "Contributions to be paid: Please detail the contributions to be paid",
+              "cotisation": "CONTRIBUTION",
+              "montant": "AMOUNT  DH",
+              "cotisation1": "Membership fee 2020",
+              "cotisation2": "Supporting member contribution 2020",
+              "cotisation3": "Advance on member contribution 2021",
+              "cotisation4": "Advance on support member contribution 2021",
+              "cotisation5": "Additional donation"
+          },
+          "Form6":{
+              "h2": "Method of payment and commitment of the organization",
+              "t1": "Scanned copy of the transfer order :*",
+              "t2": "Copy of the trade register of the member organization :*",
+              "t3": "Copy of the CIN of the leader of the member organization :*",
+              "date": "Date of demand",
+              "nomOrg": "Organization name",
+              "nomPr": "Name of legal representative"
+          },
+          "Form7":{
+              "h2": "Confirmation of membership",
+              "t1": "By clicking on confirm, you agree to our terms of use"
+          },
+          "error":{
+            "msgreq":"the field is required",
+            "msginvalid":"the field is invalid"
+        },
+        "valid":{
+            "next": "Next",
+            "back":"Back",
+            "submit":"submit"
+        }
+        }
+        ,
+        "candidature":{
+            "firstname":"Enter your Firstname",
+            "lastname":"Enter your Lastname",
+            "civilite":"Civility",
+            "madame":"Miss",
+            "monsieur":"Sir",
+            "civilite1":"Please choose a civility",
+            "email":"Enter your email",
+            "objet":"Object",
+            "embauche":"Hiring",
+            "internship1":"Internship for 2 months",
+            "internship2":"Internship for more than 2months",
+            "objet1":"Please chose an object",
+            "lettremotivation":"Cover Letter:"
+        },
+        "carrer":{
+            "msgs":"Your request has been registered, Thank you for your application",
+            "back":"Back to home",
+            "msge":"Your request has not registered, Please refresh the page and try again",
+            "refresh":"Refresh"
+
+
+        },
+        "load":"Loading ",
+        "media":{
+            "name":"name_en"
+        },
+        "prog":{
+            "t1":"CONSULT OUR PROGRAMS :",
+            "t2":"WHAT IS FIWARE? :",
+            "t3":"FIREWARE COMPONENTS :",
+            "t4":"SECTORS COVERED BY FIWARE :"
+        },
+        "captcha":{
+            "d":"Enter the numbers below.",
+            "b":"Submit",
+            "r":"Refresh",
+            "c":"Numbers"
+        }
+}

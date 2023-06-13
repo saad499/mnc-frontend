@@ -1,0 +1,95 @@
+/* top nav */
+.topnav {
+  width: 100%;
+  background-color: #f0f0f0;
+}
+.topnav a {
+  text-decoration: none;
+  color: slategray;
+  /* font-size: 0.5rem; */
+}
+.icon-topnav {
+  margin-left: 10px;
+}
+/**/nav {
+  max-width: 100% !important;
+}
+ .navbar-brand img {
+  height: 100%;
+} 
+.navbar-nav li {
+  text-align: center;
+  margin-right: 2px;
+}
+.navbar-nav li .nav-link {
+  font-size: 1rem !important;
+  color: #18a0db;
+  border: 1px solide #fff;
+}
+.navbar-nav li .nav-link:hover {
+  border-bottom: 1px solid #d6d6d6;
+}
+.button-lang {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #18a0db;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  font-size: 0.75rem !important;
+}
+.button-lang:hover {
+  color: #18a0db;
+  background-color: #c7e1ec;
+}
+.search-input {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #d6d6d6;
+  font-size: 0.75rem !important;
+  padding: 5px;
+  margin-right: 5px;
+  width: 220px;
+}
+.search-input::-webkit-input-placeholder {
+  text-align: right;
+  
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  border: none;
+}
+.dropdown-menu li a {
+  color: #18a0db;
+  font-size: 0.8rem !important;
+}
+
+.empt {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+@media screen and (max-width: 987px) {
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-input{
+    width: 20%;
+    margin-bottom: 8px;
+    margin-left: 12px;
+  }
+  .button-lang{
+    width: 20%;
+  }
+
+}

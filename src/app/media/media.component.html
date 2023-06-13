@@ -1,0 +1,75 @@
+  <app-title [title]="'footer.m' | translate"></app-title>
+    <div class="container" align="center">
+      <div class="row " >
+  <div class="col-12 text-center my-3">
+      <button class="filter-button activee" autofocus data-filter="all">All</button>
+      <button class="filter-button"  data-filter="image">Images</button>
+      <button class="filter-button" data-filter="video">Videos</button>
+  </div>
+      <div *ngFor="let d of this.gallerie" class="gallery_product col-lg-3 col-md-4 col-sm-6 filter {{d.type=='image'?'image':'video'}}"  data-aos="fade-up" data-aos-once="true" >
+        <a (click)="showModel(d)">
+          <img src="{{this.service.host+d['media_thumbnail'].url}}">
+          </a>
+          <fa-icon [icon]="d.type=='image'?img:vd" class="iconvi" (click)="showModel(d)"></fa-icon>
+          <p class="mt-2">{{d['media.name' | translate]}}</p>
+      </div>
+      </div>
+        </div>
+    <div mdbModal #video1="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true" [config]="{backdrop: 'static',  keyboard: false}" >
+      <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body mb-0 p-0" *ngIf="currentobj">
+            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half "*ngIf="currentobj['type']=='video_youtube'">
+            <iframe class="embed-responsive-item" [src]="transform(currentobj['url_youtube'])"
+                    allowfullscreen></iframe>
+          </div>
+            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half "*ngIf="currentobj['type']=='video'">
+              <video width="320" height="240" controls>
+                <source src="{{this.service.host + currentobj.media_content?.url}}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="embed-responsive embed-responsive"*ngIf="currentobj['type']=='image'">
+              <img class="img-fluid"
+                   src="{{this.service.host + currentobj.media_content?.url}}"
+                   alt="image">
+            </div>
+            <!--Footer-->
+            <div class="modal-footer ">
+              <div class="row">
+                <div class="col-4 my-auto">
+                  <span class="mr-4">{{currentobj['media.name' | translate]}}</span>
+                </div>
+                <div class="col-4 my-auto">
+                 
+                  <a href="https://www.facebook.com/sharer/sharer.php?u={{this.shareurl()}}" target="_blank" rel="noopener">
+                    <fa-icon [icon]="fb" class="icon1"></fa-icon>
+                  </a>
+                  <a href="https://wa.me/?text={{this.currentobj['media.name' | translate] +'>>  '+this.shareurl()}}" target="_blank" rel="noopener">
+                    <fa-icon [icon]="wp" class="icon1"></fa-icon>
+                  </a>
+                  <a href="https://twitter.com/share?url={{this.shareurl()}}" target="_blank" rel="noopener">
+                    <fa-icon [icon]="twitter" class="icon1"></fa-icon>
+                  </a>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url={{this.shareurl()}}&source={{host}}&title={{currentobj.name_fr}}" target="_blank" rel="noopener">
+                    <fa-icon [icon]="linkdein" class="icon1"></fa-icon>
+                  </a>
+                </div>
+                <div class="col-4 text-right my-auto">
+                  <button type="button"   (click)="closemodal()" class="button button">close
+                </button>
+              </div>
+              </div>  
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+<ngx-spinner
+    bdColor="rgba(255, 255, 255, 0.9)"
+    size="large"
+    color="#18a0db"
+    type="ball-clip-rotate-pulse">
+    <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

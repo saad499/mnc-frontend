@@ -1,0 +1,75 @@
+.centerForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#adhesionn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.icn {
+  font-size: 40px;
+}
+#cap {
+  background: rgb(230, 230, 230);
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid #18a0db;
+  padding: 10px;
+}
+#capref {
+  width: 300px;
+  margin: 0 auto;
+  background: rgb(230, 230, 230);
+}
+
+canvas {
+  display: table;
+}
+
+#ctitle {
+  text-align: center;
+  font-size: 16px;
+  margin: 5px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+#form {
+  background: #ffffff;
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid #18a0db;
+  overflow: hidden;
+}
+
+#input {
+  display: inline-block;
+  width: 60%;
+  padding: 2px 4px;
+  display: inline-block;
+  background: #ffffff;
+  color: #2b2b2b;
+  border-top: #18a0db 1px solid;
+}
+
+#submitcap {
+  background: #18a0db;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 2.5px;
+  width: 40%;
+  border-top: #18a0db 1px solid;
+}
+#refresh {
+  background: #18a0db;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 2.5px;
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+<app-title [title]="'navbar.cluster.organisation' | translate"></app-title>
+
+<div class="container" id="missions">
+  <div class="row">
+
+
+    <div class="mission col-12 row h-100" *ngFor="let type of this.typeservices;let j= index">
+      <div class="col-6 text-center align-items-center box" *ngIf="this.typeservices.indexOf(type)%2==1">
+        <img src="{{this.service.host + type.image?.url}}" alt="" data-aos="fade-left" data-aos-once="true">
+      </div>
+      <div class="col-6 text-center my-auto box" data-aos="fade-up" data-aos-once="true" *ngIf="this.typeservices.indexOf(type)%2==1">
+        <h3>{{type['services.type' | translate]}}</h3>
+        <p *ngFor="let service of type.services;let i = index">
+          <a routerLink="/our-services" fragment="{{this.dynamicurl(type['intitule_fr']+'/'+j+'/'+service.nom_fr+'/'+i)}}">{{service['services.titre' | translate]}} </a>
+        </p>     
+     </div>
+      <div class="col-6 text-center my-auto box" data-aos-once="true" data-aos="fade-up" *ngIf="this.typeservices.indexOf(type)%2==0">
+        <h3>{{type['services.type' | translate]}}</h3>
+        <p *ngFor="let service of type.services;let i = index">
+          <a routerLink="/our-services" fragment="{{this.dynamicurl(type['intitule_fr']+'/'+j+'/'+service.nom_fr+'/'+i)}}">{{service['services.titre' | translate]}} </a>
+      </p>
+      </div>
+      <div class="col-6 text-center my-auto box" *ngIf="this.typeservices.indexOf(type)%2==0">
+        <img src="{{this.service.host + type.image?.url}}" alt="" data-aos-once="true" data-aos="fade-left">
+      </div>
+    </div>
+  </div>
+</div>      
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>
+
+
+

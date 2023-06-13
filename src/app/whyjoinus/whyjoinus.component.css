@@ -1,0 +1,28 @@
+#whyjoinus {
+  margin-top: 70px;
+  margin-bottom: 0px;
+}
+img {
+  width: 100%;
+}
+.title {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  background: linear-gradient(to left, #ffffff 50%, #909091 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.title:hover {
+  background-position: left;
+  color: #ffff;
+}
+.hide {
+  visibility: hidden;
+}
+.title:hover + .hide {
+  visibility: visible;
+  color: rgb(0, 0, 0);
+}

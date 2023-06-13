@@ -1,0 +1,38 @@
+<app-title [title]="'navbar.cluster.succes' | translate"></app-title>
+<div class="container" id="success" *ngIf="this.lines">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 my-auto text-cente" data-aos="fade-up" data-aos-once="true">
+            <div class="row mb-2">            
+                <fa-icon [icon]="icon1" class="icon1"></fa-icon> 
+                <p class="col-10 my-auto"> {{this.lines['success.ligne1' | translate]}}
+                </p>
+            </div>
+            <div class="row mb-2">            
+                <fa-icon [icon]="icon2" class="icon2"></fa-icon> 
+                <p class="col-10 my-auto"> {{this.lines['success.ligne2' | translate]}} 
+                </p>
+            </div>
+            <div class="row mb-2">            
+                <fa-icon [icon]="icon3" class="icon3"></fa-icon> 
+                <p class="col-10 my-auto"> {{this.lines['success.ligne3' | translate]}}
+                </p>
+            </div>
+            <div class="row mb-2">            
+                <fa-icon [icon]="icon4" class="icon4"></fa-icon> 
+                <p class="col-10 my-auto"> {{this.lines['success.ligne4' | translate]}}
+                </p>
+            </div>
+           
+        </div>
+        <div class="col-md-6 col-sm-12 my-auto text-center" data-aos="fade-left" data-aos-once="true">
+            <img src="{{this.service.host + this.lines['image'].url}}">
+        </div>
+    </div>
+</div>
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

@@ -1,0 +1,23 @@
+img {
+  width: 50%;
+  margin-right: 30px;
+}
+#post-event {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+#post-event h3 {
+  color: #18a0db;
+}
+#post-event h4 {
+  color: #455f84;
+}
+.datee {
+  color: #455f84;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  img {
+    width: 100%;
+  }
+}

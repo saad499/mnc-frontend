@@ -1,0 +1,73 @@
+<div *ngIf="memberProfil">
+    <div class="BG">
+        <a routerLink="/our-team"><h3 style="color:white">{{'navbar.cluster.team' | translate}}</h3></a>
+    </div>
+    <!-- 
+      <app-title [title]="'navbar.cluster.team' | translate"></app-title> <h3>  {{memberProfil.nom}} {{memberProfil.prenom}} </h3>
+      <h3><span>L'équipe</span>MNC :</h3>
+      
+          <button type="button" class="button" routerLink="/adhesion">{{'navbar.joinbutton' | translate}}</button>
+    -->
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-center mb-1">
+                <div class="col-md-4 mt-3"align="center">
+                    <!-- Afficher la photo-->
+                    <img [src]="this.service.host + memberProfil.photo?.url" alt="Photo">
+                </div>
+            </div>
+          <div class="col-md-12">
+            <!-- Afficher les informations personnelles 
+            <h5>{{memberProfils['memberprofil.team_bio' | translate]}}</h5>
+            -->
+    
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="row mt-1">
+                    <div class="d-flex">
+                      <div class="m-1">
+                        <h4><span style="color:#18a0db">{{memberProfil['memberprofil.team_bio' | translate]}} : </span></h4>
+                      </div> 
+                      <div class=" m-1">
+                        <h4><span class="text-dark">{{memberProfil.nom}}</span></h4> 
+                      </div>
+                      <div class="m-1">
+                        <h4><span class="text-dark">{{memberProfil.prenom}}</span></h4> 
+                      </div>
+                    </div>
+                </div>
+            </div>
+          
+             <div class="text-center">
+              <h5>
+                <a style="color:#18a0db" [href]="memberProfil.linkedin_url" target="_blank">LinkedIn</a>
+              </h5>
+             </div>   
+                
+            
+            <h3>{{'memberprofil.descrip' | translate}}</h3> <span class="text-dark" [innerHTML]="memberProfil['memberprofil.description' | translate]| MarkdownToHtml"></span>
+            <h3>Parcours: </h3><div [innerHTML]="memberProfil['memberprofil.parcours' | translate]| MarkdownToHtml" id="avstys"></div>
+        
+            
+
+            <!-- Afficher le lien vers LinkedIn -->
+            
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+        <div class="row mt-3">
+          <div class="col">
+            <div class="mb-3">
+              <!-- Afficher les vidéos -->
+              <h3>{{'memberprofil.video'|translate}}</h3>
+                <div class="d-flex justify-content-center">
+                    <div *ngFor="let video of memberProfil.video" class="d-inline-block me-3"  style="width: 320px;">
+                        <video src="{{this.service.host + video?.url}}" type="video/mp4" controls style="width: 100%; height: auto;"></video>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+</div>

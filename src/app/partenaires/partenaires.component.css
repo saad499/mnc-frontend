@@ -1,0 +1,22 @@
+.imgpart {
+  width: 100%;
+  height: 100%;
+}
+
+.uurrl {
+  min-width: 100%;
+  min-height: 100%;
+}
+#partenaires {
+  margin-bottom: 50px;
+}
+
+.row .prt {
+  min-height: 200px;
+}
+
+h3::before {
+  content: "|";
+  color: #18c;
+  margin-right: 20px;
+}

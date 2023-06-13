@@ -1,0 +1,47 @@
+<app-title [title]="'navbar.expertise.Fiware' | translate"></app-title>
+<div class="container">
+  <div class="row fiw">
+    <div class="col-12 col-md-8 my-auto">
+      <p><span>FIWARE</span><br>
+        {{'fiware.homedesc' | translate}}
+      </p>
+    </div>
+    <div class="col-12 col-md-4">
+      <img src="../../assets/images/fiware.png">
+    </div>
+  </div>
+
+</div>
+<div class="container" id="projects">
+  <mat-tab-group *ngIf="fiware"  style="display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;">
+    <mat-tab *ngFor="let p of fiware">
+      <ng-template mat-tab-label >
+        <img src="{{service.host+p.icon?.url}}" alt="icon" class="iconetab">
+        {{p['fiware.titre' | translate]}}
+      </ng-template>
+      <div class="container mt-3">
+        <div class="row justify-content-around">
+          <div class="col-md-6 col-12  my-auto ">
+            <img src="{{this.service.host+p.image.url}}"  class="servimage">
+          </div>
+          <div class="col-md-6 col-12 servstl my-auto">
+            <h5 id="avmbtitle">
+              {{p['fiware.hint' | translate]}}
+            </h5>
+            <p>{{p['fiware.desc' | translate]}}</p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

@@ -1,0 +1,12 @@
+.title {
+  color: #18a0db;
+}
+#cotisation {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 500px) {
+  .table {
+    font-size: 0.7rem !important;
+  }
+}

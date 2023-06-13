@@ -1,0 +1,36 @@
+<app-title [title]="'navbar.rejcluster.bc' | translate"></app-title>
+<div class="container" id="cotisation">
+    <div class="row"  *ngIf="content">
+        <div class="col-12 text-center">
+            {{'cotisation.payement' | translate}} : <span class="title">{{this.content['Payement']}}</span>
+        </div>
+        <div class="col-12 text-center my-4">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">{{'cotisation.mmbre' | translate}}</th>
+                    <th scope="col">{{'cotisation.cot' | translate}}</th>
+                    <th scope="col">{{'cotisation.scot' | translate}}</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let c of cotisation">
+                    <td>{{c['cotisation.catmembre' | translate]}}</td>
+                    <td>{{c['Cotisation']}}</td>
+                    <td>{{c['Cotisation_de_soutien']}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="col-12 text-center" [innerHTML]="content['cotisation.req' | translate] |MarkdownToHtml">
+        </div>
+    </div>
+</div>
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

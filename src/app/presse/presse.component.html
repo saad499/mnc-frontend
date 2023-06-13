@@ -1,0 +1,63 @@
+<app-title [title]="'navbar.actualites.presse' | translate"></app-title>
+<div class="container" id="presse" >
+    
+    <div class="row" *ngIf="events!=false">
+        <div class=" col-md-6 col-lg-4 col-12" *ngFor = "let event of events">
+            <div class="card mb-4">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              
+              <a routerLink="{{'/news/'+genereurl(event['id'])}}">
+                <img
+                src="{{this.service.host+event['image']?.url}}"
+                class="img-fluid"
+              />
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title ">{{event['events.titre' | translate]}}</h5>
+              <p class="card-text" >
+                {{(event['events.post' | translate]).substring(0,199)+'...'}}
+              </p>
+             
+              <div class="row">
+              <div class="col-6 my-auto">
+              
+                <span>  <fa-icon [icon]="calendar"></fa-icon>  {{event['date']}}</span>
+            </div>
+            <div class="col-6 text-right" >
+                <a routerLink="{{'/news/'+genereurl(event['id'])}}" class="btne">{{'events.plus' | translate}}  <fa-icon [icon]="sing"></fa-icon></a>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-3">
+            <nav >
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a class="page-link" (click)=" getDataForpage(currentpage-1)"  *ngIf = "hasprevious" aria-label="Previous">
+                      <span aria-hidden="true"><fa-icon [icon]="left"></fa-icon></span>
+                      <span class="sr-only" >Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item" *ngFor = "let number of numbers" ><span id="{{'page'+number}}" class="page-link" (click)=" getDataForpage(number)">{{number+1}}</span></li>
+                  <li class="page-item">
+                    <a class="page-link" (click)=" getDataForpage(currentpage+1)"  *ngIf = "hasnext" aria-label="Next">
+                      <span aria-hidden="true"><fa-icon [icon]="right"></fa-icon></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+        
+    </div>
+
+</div>
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

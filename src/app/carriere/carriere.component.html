@@ -1,0 +1,139 @@
+<app-title [title]="'navbar.rejcluster.carr' | translate"></app-title>
+<div class="container" id="career">
+  <form [formGroup]="firstFormGroup" #formDirective="ngForm" *ngIf="!isdone && !showcaptcha && !isnotdone">
+    <div class="row text-center padding">
+      <div class="col-md-4 col-xs-12 row" >
+      <mat-form-field class="col-md-12 col-xs-12 ">
+      <input matInput type="text" placeholder="{{'candidature.firstname' | translate}}" formControlName="firstName" required>
+      <mat-error *ngIf="firstFormGroup.controls['firstName'].hasError('minlength') || firstFormGroup.controls['firstName'].hasError('maxlength')">
+        {{'adhesionForm.error.msginvalid' | translate}}
+      </mat-error>
+      <mat-error *ngIf=" firstFormGroup.controls['firstName'].hasError('required')">
+          {{'adhesionForm.error.msgreq' | translate}}
+        </mat-error>
+    </mat-form-field>
+    </div>
+    <div class="col-md-4 col-xs-12 row" >
+      <mat-form-field class="col-md-12 col-xs-12 ">
+        <input matInput type="text" placeholder="{{'candidature.lastname' | translate}}" formControlName="lastName" required>
+        <mat-error *ngIf="firstFormGroup.controls['firstName'].hasError('minlength') || firstFormGroup.controls['firstName'].hasError('maxlength')">
+          {{'adhesionForm.error.msginvalid' | translate}}
+        </mat-error>
+        <mat-error *ngIf=" firstFormGroup.controls['firstName'].hasError('required')">
+            {{'adhesionForm.error.msgreq' | translate}}
+          </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-4 col-xs-12 row" >
+    <mat-form-field class="col-md-12 col-xs-12 ">
+      <mat-select placeholder="{{'candidature.civilite' | translate}}" formControlName="civilite" required>
+        <mat-option value="madame">{{'candidature.madame' | translate}}</mat-option>
+        <mat-option value="monsieur">{{'candidature.monsieur' | translate}}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="firstFormGroup.controls['civilite'].hasError('required')">
+        {{'adhesionForm.error.msgreq' | translate}}
+      </mat-error>
+    </mat-form-field>
+    </div>
+  
+    </div>
+    <div class="row text-center padding">
+      <div class="col-md-4 col-xs-12 row" >
+      <mat-form-field class="col-md-12 col-xs-12 ">
+      <input matInput type="text" placeholder="{{'candidature.email' | translate}}" formControlName="email" required>
+      <mat-error *ngIf="firstFormGroup.controls['email'].hasError('minlength') || firstFormGroup.controls['email'].hasError('maxlength')
+      || firstFormGroup.controls['email'].hasError('email')">
+      {{'adhesionForm.error.msginvalid' | translate}}
+
+      </mat-error>
+      <mat-error *ngIf="firstFormGroup.controls['email'].hasError('required')">
+        {{'adhesionForm.error.msgreq' | translate}}
+      </mat-error>
+    </mat-form-field>
+    </div>
+    <div class="col-md-4 col-xs-12 row" >
+    <mat-form-field class="col-md-12 col-xs-12 ">
+      <mat-select placeholder="{{'candidature.objet' | translate}}" formControlName="objet" required>
+        <mat-option value="embauche">{{'candidature.embauche' | translate}}</mat-option>
+        <mat-option value="stage PFA">{{'candidature.internship1' | translate}}</mat-option>
+        <mat-option value="stage PFE">{{'candidature.internship2' | translate}}</mat-option>
+      </mat-select>
+     
+    </mat-form-field>
+    </div>
+  
+    </div>
+    <div class="row  padding">
+        <div class="col-md-4 col-xs-6">
+          <p >CV</p>
+        </div>
+        <div class="col-md-4 col-xs-6">
+          <input #fileV type="file" accept="application/pdf" FormControlName="CV" multiple="false" (change)="onFileChange($event,'CV')"/>
+          <error   *ngIf="isSizeLargeCV">
+            {{'adhesionForm.error.msginvalid' | translate}}
+          </error>
+        </div>
+    </div>
+    <div class="row padding">
+        <div class="col-md-4 col-xs-6">
+          <p >{{'candidature.lettremotivation' | translate}}</p>
+        </div>
+        <div class="col-md-4 col-xs-6">
+          <input #fileV type="file" accept="application/pdf" FormControlName="LM" multiple="false" (change)="onFileChange($event,'LM')"/>
+          <error   *ngIf="isSizeLargeLM">
+            {{'adhesionForm.error.msginvalid' | translate}}
+          </error>
+        </div>
+    </div>
+
+    
+  <div class="row">
+    <div class="col-12 text-center">
+    <button mat-button class="btn" type="submit" [disabled]="firstFormGroup.invalid" (click)="showcaptcha=true;loadcap()">{{'adhesionForm.valid.submit' | translate}}</button>
+  </div>
+</div>
+</form>
+<form [formGroup]="CaptchaFG" [hidden]="!showcaptcha || isdone || isnotdone">
+  <div class="row">
+    <div class="col">
+      <div id="capref">
+        <button id="refresh" (click)='clear();resetCanvas()' required> <fa-icon [icon]="reficon"></fa-icon>{{'captcha.r' | translate}}</button>
+      </div>
+      <div id="cap">
+        <canvas #Mycanvas id="canvas" width="350px" height="100px">   </canvas>
+        </div>
+      <div id="form">
+        <p id="ctitle">{{'captcha.d' | translate}}</p>
+       <input id="input" formControlName="captcha" type="text" maxlength="4" autocomplete="off" name="input" placeholder="{{'captcha.c' | translate}}" required>
+        <button id="submitcap" value="Submit" type="submit" required>{{'captcha.b' | translate}}</button>
+        
+      </div>
+    </div>
+</div>
+</form>
+<div class="row" *ngIf="isdone">
+<div class="col-1 icn">
+  <fa-icon [icon]="donne"></fa-icon>
+</div>
+<div class="col-11">
+<p>{{'carrer.msgs' | translate}}</p>
+<a routerLink="/">{{'carrer.back' | translate}}</a>
+</div>
+</div>
+<div class="row" *ngIf="isnotdone">
+  <div class="col-1 icn">
+    <fa-icon [icon]="ndonne"></fa-icon>
+  </div>
+  <div class="col-11">
+  <p>{{'carrer.msge' | translate}}</p>
+  <a href="/">{{'carrer.refresh' | translate}}</a>
+  </div>
+  </div>
+  </div>
+  <ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner> 

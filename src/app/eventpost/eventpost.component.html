@@ -1,0 +1,22 @@
+<app-title [title]="event['events.titre' | translate]"></app-title>
+<div class="container" id="post-event">
+    <div class="row" *ngIf="event!=false">
+        <div class=" col-12">
+            <img class="float-md-left mb-md-0 mb-3" src="{{this.service.host+event['image']?.url}}" >
+            <h4>{{this.event['events.thematique' | translate]}}</h4>
+            <p class="float-md-none float-right datee" >                     
+                <fa-icon [icon]="icon"></fa-icon>
+                27/11/2019
+            </p>
+            <br>
+            <div class="post" innerHtml="{{(this.event['events.post' | translate]) | MarkdownToHtml}}"></div>
+        </div>
+    </div>
+</div>
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

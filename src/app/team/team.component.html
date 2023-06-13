@@ -1,0 +1,31 @@
+<app-title [title]="'navbar.cluster.team' | translate"></app-title>
+<div class="container team">
+    <div class="row text-center my-5">
+        <div class="col-12" data-aos="fade-up" data-aos-once="true">
+            <p>
+                {{'team.ligne1' | translate}}
+            </p>
+            <p class="textstyle">
+                {{'team.ligne2' | translate}}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-xs-12 text-center box" *ngFor="let memberProfils of memberProfil" data-aos="fade-up" data-aos-once="true">
+            <a [routerLink]="'/memberProfil/' + memberProfils.id"><img [src]="this.service.host + memberProfils.photo?.url" alt="Photo"></a>
+            <h4>{{memberProfils.nom}} {{memberProfils.prenom}}</h4>
+            <h5>{{memberProfils['memberprofil.team_bio' | translate]}}</h5>
+            <a href="{{memberProfils.linkedin_url}}" target="_blank">
+                <fa-icon [icon]="icone"></fa-icon> Linkedin
+            </a>
+        </div>
+        
+    </div>
+</div>
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

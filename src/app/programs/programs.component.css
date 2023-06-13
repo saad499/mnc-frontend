@@ -1,0 +1,80 @@
+#projects {
+  border: 0.5px #ece8e8da solid;
+  min-height: 300px;
+  margin-bottom: 20px;
+}
+.iconetab {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.iconetabb {
+  width: 120px;
+  height: 30px;
+  margin-right: 5px;
+}
+.avmbtitle {
+  color: #303b44;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.avmbtitle::before {
+  content: "|";
+  color: #18a0db;
+}
+.servimage {
+  width: 100%;
+  margin-bottom: 10px;
+}
+::ng-deep .mat-ink-bar {
+  background-color: #18a0db !important;
+}
+.fiw img {
+  width: 100%;
+}
+p span {
+  font-size: 50px;
+  color: #3e5479;
+  margin: 0;
+}
+
+#whyjoinus {
+  margin-top: 70px;
+  margin-bottom: 0px;
+}
+img {
+  width: 100%;
+}
+.title {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  background: linear-gradient(to left, #ffffff 50%, #3e5479 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.title:hover {
+  background-position: left;
+  color: #ffff;
+}
+.hide {
+  visibility: hidden;
+}
+.title:hover + .hide {
+  visibility: visible;
+  color: rgb(0, 0, 0);
+}
+.parprog {
+  line-height: 30px;
+}
+.secimg {
+  border-radius: 50%;
+  width: 100%;
+}
+ul li::before {
+  content: "-";
+  margin-right: 16px;
+}

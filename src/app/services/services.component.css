@@ -1,0 +1,29 @@
+.title {
+  text-align: center;
+  color: #2f4050;
+  width: 100%;
+  margin-top: 20px;
+}
+.services {
+  padding-bottom: 20px;
+}
+#servicess {
+  border: 0.5px #ece8e8da solid;
+}
+.iconetab {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+#avmbtitle {
+  color: #2f4050;
+  text-align: center;
+  font-weight: bold;
+}
+.servimage {
+  width: 100%;
+  margin-bottom: 10px;
+}
+::ng-deep .mat-ink-bar {
+  background-color: #18a0db !important;
+}

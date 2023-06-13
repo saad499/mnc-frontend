@@ -1,0 +1,25 @@
+<app-title [title]="'navbar.rejcluster.pq' | translate"></app-title>
+<div class="container" id="whyjoinus">
+    <div class="row">
+        <div class="col-md-4 col-12 my-2" *ngFor="let d of donnees" data-aos="fade-up" data-aos-once="true">
+            <div class="row">
+                <div class="col-12">
+                    <img src="{{this.service.host + d['icone'].url}}" alt="" srcset="">
+                </div>
+                <div class="col-12 text-center">
+            <a class="title">
+                <fa-icon [icon]="icone"></fa-icon> {{d['joinus.titre' | translate]}}</a>
+            <p class="hide mt-2">{{d['joinus.desc' | translate]}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

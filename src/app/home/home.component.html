@@ -1,0 +1,166 @@
+<div id="home" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li  data-target="#home" data-slide-to="0" class="active"></li>
+        <li *ngFor="let act of actualites;let i = index" data-target="#home" attr.data-slide-to="{{i+1}}" ></li>
+        <li *ngFor="let act of events;let i = index" data-target="#home" attr.data-slide-to="{{i+nbractu+1}}" ></li>
+    </ul>
+    <div class="carousel-inner">
+        <!---->
+        <div class="carousel-item active" 
+        style="
+        background-image: linear-gradient(
+            rgba(55, 169, 218, 0.2), 
+            rgba(24, 160, 219, 0.2)
+          ), url({{this.home_image}}); 
+          background-size: contain;
+          background-repeat: no-repeat;">
+           <!----> <img src="{{this.home_image}}" style="visibility:hidden">
+            <div class="carousel-caption" style="position: absolute;
+            top: 43%;
+            left: 50%;
+            width: 70%;
+            transform: translate(-50%, -50%);">
+                <h2 class="title-home">{{'home_actualite.mnc' | translate}}</h2>
+                <button type="button" class="button" routerLink="/adhesion">{{'navbar.joinbutton' | translate}}</button>
+
+            </div>
+        </div>
+        
+        
+        <div class="carousel-item" *ngFor="let act of actualites" style="    
+        background-image: linear-gradient(
+            rgba(24, 160, 219, 0.2), 
+            rgba(24, 160, 219, 0.2)
+          ), url({{service.host+act.image.url}});background-size: contain;
+          background-repeat: no-repeat;   ">
+            <img src="{{service.host+act.image.url}}" style="visibility:hidden">
+            <div class="carousel-caption">
+                <h5 class="title-home">{{act['home_actualite.titre' | translate]}}</h5>
+               <a routerLink="/news/{{genereurl(act.id)}}"><button type="button" class="button">{{'home_actualite.button' | translate}}</button></a>
+            </div>
+        </div>
+
+        <div class="carousel-item" *ngFor="let act of events" 
+        style="  background-image: linear-gradient(
+            rgba(24, 160, 219, 0.2), 
+            rgba(24, 160, 219, 0.2)
+          ), url({{service.host+act.background_image.url}});background-size: contain;
+          background-repeat: no-repeat;">
+            <img src="{{service.host+act.background_image.url}}" style="visibility:hidden">
+            <div class="carousel-caption" style="position: absolute;
+            top: 44%;">
+                <h5 class="title-home">{{act['home_actualite.titre' | translate]}}</h5>
+                
+               <a routerLink="/event/{{genereurl(act.id)}}"><button type="button" class="button">{{'home_actualite.button' | translate}}</button></a>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#home" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#home" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container" id="mnc">
+    <div class="container-fluid">
+        <div class="row qui-somme-nous ">
+            <div class="col-12 text-center">
+                <h3 class="title">{{'home_actualite.mnc' | translate}}</h3>
+            </div>
+            <div class="col-12" *ngIf="mnc_data" innerHtml="{{mnc_data[('quisomme.description') | translate] | MarkdownToHtml}}" id="avsty">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid " *ngIf="mnc_data" >
+       <div class="row text-center " (scroll)="scroled()">
+           <div class="col-12 col-sm-6 col-md-4 col-lg ">
+               <div class="image"><img src="../../assets/images/icones/Projets.png" ></div>
+               <div class="number" id="number1"></div>
+            <div class="plus"><p>{{'quisomme.nb1' | translate}}</p></div>
+           </div>
+           <div class="col-12 col-sm-6 col-md-4 col-lg ">
+            <div class="image"><img src="../../assets/images/icones/partenariats.png" ></div>
+            <div class="number" id="number2"></div>
+            <div class="plus"><p>{{'quisomme.nb2' | translate}}</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg ">
+            <div class="image"><img src="../../assets/images/icones/membres.png" ></div>
+            <div class="number" id="number3"></div>
+            <div class="plus"><p>{{'quisomme.nb3' | translate}}</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg ">
+            <div class="image"><img src="../../assets/images/icones/evenements.png" ></div>
+            <div class="number" id="number4"></div>
+            <div class="plus"><p>{{'quisomme.nb4' | translate}}</p></div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg ">
+            <div class="image"><img src="../../assets/images/icones/investissements.png" ></div>
+            <div class="number" id="number5"></div>
+            <div class="plus"><p>{{'quisomme.nb5' | translate}}</p></div>
+        </div>
+           
+       </div>
+    </div>
+    </div>
+
+    <!---->
+    <div class="miss">
+        <div class=" row mission">
+            <div class="col-12 text-center my-auto">
+                <h2 class="title-homet">Nos Missions</h2>
+            </div>
+        </div>
+        <div id="mission" class="carousel slide " data-ride="carousel">
+            <ul class="carousel-indicators ">
+                <li *ngFor="let miss of missions;let i = index" data-target="#mission" attr.data-slide-to="{{i}}" class="{{i==0?'active':''}}"></li>
+            </ul>
+            <div class="carousel-inner" *ngIf="missions">
+                <div *ngFor="let miss of missions; let i = index" class="carousel-item {{i==0?'active':''}}" style="background-image: linear-gradient(
+                    rgba(119, 119, 119, 0.2), 
+                    rgba(110, 110, 110, 0.2)
+                  ), url({{service.host+miss.image.url}});background-size: cover;
+                  background-repeat: no-repeat;">
+                    <img src="{{service.host+miss.image.url}}" style="visibility:hidden" >
+                    <div class="carousel-caption" style="position: absolute;
+                    top: 55%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);">
+                        <h2 class="titles-home" style="border-radius: 20px;" >{{miss['missions.titre' | translate]}}</h2>
+                    </div>
+                </div>
+                
+            </div>
+            <a class="carousel-control-prev" href="#mission" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#mission" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class=" row mission">
+            <div class="col-12 ">
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container" id="rej">
+        <div class="row regoindre-cluster text-center">
+            <div class="col-12">
+                <h3 class="title">{{'home_rejoindre' | translate}}</h3>
+                <button type="button" class="button" routerLink="/adhesion">{{'navbar.joinbutton' | translate}}</button>
+            </div>
+        </div>
+</div>
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

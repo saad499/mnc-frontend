@@ -1,0 +1,23 @@
+<app-title [title]="'navbar.partentaires.title' | translate"></app-title>
+<div class="container" id="partenaires">
+    <div class="row " *ngIf="this.ps">
+        <div class="col-12 my-4 prt" *ngFor="let p of this.ps" id="{{this.genereurl(p['type_fr'])}}" >
+            <h3 >{{p['partenaires.type' | translate]}}</h3>
+            <div class="row mt-2 justify-content-center" >
+                <div class="col-md-2 col-4  my-auto" data-aos="fade-up" data-aos-once="true" id="box" *ngFor="let l of p['partenaires_logo_urls']">
+                        <a href="{{l.url}}" class="uurrl" target="_blank" rel="noopener noreferrer">
+                            <img class="imgpart" src="{{this.service.host + l?.logo?.url}}">
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div><!---
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>-->

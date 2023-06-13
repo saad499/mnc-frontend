@@ -1,0 +1,217 @@
+<!--<footer class="footer-top">
+<div style="display: flex; justify-content: space-between; margin-right: 50px;">
+  <div class="row">
+    
+
+
+    <div class="col-lg col-sm-6 col-xs-12 seg1 text-center">
+      <img src="../../assets/images/logo_footer.png" alt="" srcset="">
+    </div>
+    
+
+
+
+    <div class="col-lg col-sm-6 col-xs-12 seg2">
+      <h3>{{'home_actualite.mnc' | translate}}</h3>
+      <p>
+      {{'footer.mnc' | translate}}
+      </p>
+    </div>
+    
+
+
+      <div class="col-lg col-sm-6 col-xs-12 seg3">
+        <h3>{{'footer.news' | translate}}</h3>
+        <div class="text-center h-100" *ngIf="actu">
+          <div class="row" style="margin-bottom: -4px;" >
+            <div class="col-md-6" style="margin-right: -70px;">
+              <a routerLink="/news/{{genererurl(actu['actualite1'].id)}}"><img src="{{service.host+actu['actualite1'].image.url}}" class="mb-1 mr-1" srcset=""></a>
+            </div>
+            <div class="col-md-6">
+              <a routerLink="/news/{{genererurl(actu['actualite2'].id)}}"><img src="{{service.host+actu['actualite2'].image.url}}" class="mb-1 mr-1" srcset=""></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6"  style="margin-right: -70px; ">
+              <a routerLink="/news/{{genererurl(actu['actualite3'].id)}}"><img src="{{service.host+actu['actualite3'].image.url}}" class="mb-1 mr-1" srcset=""></a>
+            </div>
+            <div class="col-md-6">
+              <a routerLink="/news/{{genererurl(actu['actualite3'].id)}}"><img src="{{service.host+actu['actualite4'].image.url}}" class="mb-1 mr-1" srcset=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+      <div class="col-lg col-sm-6 col-xs-12 seg4" *ngIf = " contact">
+        <h3>{{'footer.cnt_title' | translate}}</h3>
+        <a href="mailto:{{ contact.email }}"><fa-icon [icon]="faEnv"></fa-icon> {{contact.email}} </a>     <br>
+        <a href="tel:+212{{ contact.telephone }}"><fa-icon [icon]="faPh"></fa-icon> +212 {{contact.telephone}}</a>     <br>
+        <a style="line-height: 4px;"><fa-icon [icon]="map"></fa-icon> {{contact.adresse}} </a>
+      </div>
+      
+
+
+      
+      <div class="col-lg col-sm-6 col-xs-12 seg5" >
+        <h3>{{'footer.insc_title' | translate}}</h3>
+        <p *ngIf="captchaaa==false && done==notdone">{{'footer.insc' | translate}}
+        </p>
+        <p *ngIf="notdone"><fa-icon [icon]="ndonne"></fa-icon> {{'footer.notdone' | translate}}</p>
+        <form [formGroup]="NewsForm" (ngSubmit)="this.captchaaa=true;loadcap()" *ngIf="captchaaa==false && done==notdone" >
+          <input type="email"  class="input1" placeholder="Email" formControlName="email" name="email" required>
+
+
+        <input type="submit" value="{{'footer.btn_insc' | translate}}" class="input2" [disabled]="NewsForm?.pristine || NewsForm?.invalid">
+        <div *ngIf="NewsForm.controls['email']?.invalid && (NewsForm.controls['email']?.dirty || NewsForm.controls['email']?.touched)" class="alertt">
+          emal invalid
+          <div *ngIf="NewsForm.controls['email'].errors.required">
+            email is required
+          </div>
+      </div>
+      </form>
+
+        <form [formGroup]="captchaform" [hidden]="!captchaaa">
+          <div class="row">
+            <div class="col">
+              <div id="capref">
+                <button id="refresh" (click)='clear();resetCanvas()' required> <fa-icon [icon]="reficon" ></fa-icon>{{'captcha.r' | translate}}</button>
+              </div>
+              <div id="cap">
+                <canvas #Mycanvas id="canvas" width="200px" height="60px">   </canvas>
+                </div>
+              <div id="form">
+                <p id="ctitle">{{'captcha.d' | translate}}</p>
+               <input id="input" formControlName="captcha" type="text" maxlength="4" name="input" autocomplete="off" placeholder="{{'captcha.c' | translate}}" required>
+                <button id="submitcap" value="Submit" type="submit" required>{{'captcha.b' | translate}}</button>
+
+              </div>
+            </div>
+        </div>
+        </form>
+        <p *ngIf="done"><fa-icon [icon]="donne"></fa-icon> {{'footer.done' | translate}}</p>
+      </div>
+      
+    
+    
+  </div>
+</div>
+
+
+</footer>-->
+<footer class="footer-top p-5">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="width: 250px; height: 200px; display: flex; justify-content: center; align-items: center;">
+      <div class="col-lg col-sm-6 col-xs-12 seg1 text-center align-content-center">
+        <img src="../../assets/images/logo_footer.png" alt="" srcset="">
+      </div>
+    </div>
+    <div class="rows" style="width: 400px; height: 200px; display: flex; justify-content: center;">
+      <div class="col-lg col-sm-6 col-xs-12 seg2">
+        <h3 style="color: #18a0db">{{'home_actualite.mnc' | translate}}</h3>
+        <div style="font-size: 13px;">
+          <p style="color:white">
+          {{'footer.mnc' | translate}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="rows" style="width: 250px; height: 200px;">
+      <div class="col-lg col-sm-6 col-xs-12 seg3">
+        <h3 style="color: #18a0db">{{'footer.news' | translate}}</h3>
+        <div class="h-100 seg4" *ngIf="actu">
+          
+              <!--<a routerLink="/news/{{genererurl(actu['actualite1'].id)}}"><img src="{{service.host+actu['actualite1'].image.url}}" class="mb-1 mr-1" srcset=""></a>
+              <a routerLink="/news/{{genererurl(actu['actualite2'].id)}}"><img src="{{service.host+actu['actualite2'].image.url}}" class="mb-1 mr-1" srcset=""></a>
+              <a routerLink="/news/{{genererurl(actu['actualite3'].id)}}"><img src="{{service.host+actu['actualite3'].image.url}}" class="mb-1 mr-1" srcset=""></a>
+              <a routerLink="/news/{{genererurl(actu['actualite3'].id)}}"><img src="{{service.host+actu['actualite4'].image.url}}" class="mb-1 mr-1" srcset=""></a>-->
+              <a class="forcklick" routerLink="/events">{{'navbar.actualites.event' | translate}}</a><br>
+              <!--<a class="forcklick" routerLink="/press">{{'navbar.actualites.presse' | translate}}</a><br>-->
+              <a class="forcklick" routerLink="/media">{{'navbar.actualites.media' | translate}}</a><br>
+              
+              <!--
+                <li><a class="dropdown-item forcklick" routerLink="/events">{{'navbar.actualites.event' | translate}}</a></li>
+                     style="color:white"
+                    <li><a class="dropdown-item forcklick" routerLink="/blog">{{'navbar.actualites.blog' | translate}}</a></li>
+                    <li><a class="dropdown-item forcklick" routerLink="/media">{{'navbar.actualites.media' | translate}}</a></li>
+              -->
+        </div>
+      </div>
+    </div>
+    <!--<h3>Parcours: </h3><div [innerHTML]="memberProfil['memberprofil.parcours' | translate]| MarkdownToHtml" id="descsty"></div>
+    
+      "contact":{
+        "adresse":"adresse_en"
+    }
+    -->
+    <div class="rows"  style="width: 250px; height: 200px;">
+      <div class="col-lg col-sm-6 col-xs-12 seg4" *ngIf = " contact">
+        <h3 style="color: #18a0db">{{'footer.cnt_title' | translate}}</h3>
+          <a href="mailto:{{ contact.email }}"><fa-icon [icon]="faEnv"></fa-icon> {{contact.email}} </a>     <br>
+          <a href="tel:+212{{ contact.telephone }}"><fa-icon [icon]="faPh"></fa-icon> +212 {{contact.telephone}}</a>     <br>
+          <a style="line-height: 4px;"><fa-icon [icon]="map"></fa-icon> {{contact['contact.adresse' | translate]}} </a>
+      </div>
+    </div>
+    <div class="rows"  style="width: 300px; height: 200px;">
+      <div class="col-lg col-sm-6 col-xs-12 seg5" >
+        <h3 style="color: #18a0db">{{'footer.insc_title' | translate}}</h3>
+        <p style="color: white; font-size: 13px;" *ngIf="captchaaa==false && done==notdone">{{'footer.insc' | translate}}
+        </p>
+        <p *ngIf="notdone"><fa-icon [icon]="ndonne"></fa-icon> {{'footer.notdone' | translate}}</p>
+        <form [formGroup]="NewsForm" (ngSubmit)="this.captchaaa=true;loadcap()" *ngIf="captchaaa==false && done==notdone" >
+          <input type="email"  class="input1" placeholder="Email" formControlName="email" name="email" required>
+
+
+        <input type="submit" value="{{'footer.btn_insc' | translate}}" class="input2" [disabled]="NewsForm?.pristine || NewsForm?.invalid">
+        <div *ngIf="NewsForm.controls['email']?.invalid && (NewsForm.controls['email']?.dirty || NewsForm.controls['email']?.touched)" class="alertt">
+          emal invalid
+          <div *ngIf="NewsForm.controls['email'].errors.required">
+            email is required
+          </div>
+      </div>
+      </form>
+
+        <form [formGroup]="captchaform" [hidden]="!captchaaa">
+          <div class="row">
+            <div class="col">
+              <div id="capref">
+                <button id="refresh" (click)='clear();resetCanvas()' required> <fa-icon [icon]="reficon" ></fa-icon>{{'captcha.r' | translate}}</button>
+              </div>
+              <div id="cap">
+                <canvas #Mycanvas id="canvas" width="200px" height="60px">   </canvas>
+                </div>
+              <div id="form">
+                <p id="ctitle">{{'captcha.d' | translate}}</p>
+               <input id="input" formControlName="captcha" type="text" maxlength="4" name="input" autocomplete="off" placeholder="{{'captcha.c' | translate}}" required>
+                <button id="submitcap" value="Submit" type="submit" required>{{'captcha.b' | translate}}</button>
+
+              </div>
+            </div>
+        </div>
+        </form>
+        <p *ngIf="done"><fa-icon [icon]="donne"></fa-icon> {{'footer.done' | translate}}</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="foooter-bottom">
+<div class="container">
+<div class="row no-gutter">
+  <div class="col-md-5 col-xs-12 text-center my-auto order-md-first order-last">
+    <p>&copy;{{this.year}}{{'footer.copy' | translate}}</p>
+  </div>
+  <div class="col-md-7 col-xs-12 text-center my-auto">
+    <ul>
+      <li><a routerLink="/" ><span (click)="topFunction()">{{'navbar.home' | translate}}</span></a></li>
+      <li><a routerLink="/" fragment="mnc" ><span (click)="todivFunc('mnc')">{{'footer.whosus' | translate}}</span></a></li>
+      <li><a routerLink="/partners">{{'navbar.partentaires.title' | translate}}</a></li>
+      <li><a routerLink="/adhesion">{{'navbar.joinbutton' | translate}}</a></li>
+      <li><a routerLink="/events">{{'navbar.actualites.event' | translate}}</a></li>
+      <li><a routerLink="/media">{{'footer.m' | translate}}</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>

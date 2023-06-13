@@ -1,0 +1,320 @@
+{    
+    "titre":"MNC site web officiel",
+    "home_rejoindre":"REJOIGNEZ LE CLUSTER DÈS MAINTENANT",
+    "navbar":{
+        "home":"Accueil",
+        "cluster":{
+            "title":"Cluster",
+            "mission":"Nos missions",
+            "succes":"Notre définition de la réussite",
+            "team":"L'équipe MNC",
+            "organisation":"Notre organisation"
+        },
+        "expertise":{
+            "title":"Expertise",
+            "services":"Nos services",
+            "project":"Nos projets",
+            "programmes":"Nos programmes",
+            "Fiware":"Fiware"
+        },
+        "lang":{
+            "title":"Langues",
+            "fr":"Français",
+            "en":"Anglais"
+        },
+        "partentaires":{
+            "title":"Partenaires",
+            "inst" : "Institutions et Organismes Publics",
+            "ge":"Grandes Entreprises",
+            "univ": "Universités Et Instituts De Recherche",
+            "pi":"Partenaires Internationaux",
+            "sup":"START UPS & PME",
+            "assioc":"Associations"
+        },
+        "rejcluster":{
+            "title":"Rejoindre",
+            "pq" : "Pourquoi nous Rejoindre?",
+            "bc":"Barème des cotisations",
+            "formad": "Formulaire d'adhésion",
+            "carr":"Carrière"
+        },
+        "actualites":{
+            "title":"Actualités",
+            "event":"Evénements",
+            "presse":"Autres actions",
+            "blog":"Blog",
+            "media":"médiathèque"
+        },
+        "joinbutton":"Adhérer au cluster"
+    },
+    "home_actualite":{
+        "mnc":"Maroc Numeric Cluster",
+        "button":"Lire plus",
+        "titre":"titre_fr",
+        "post":"post_fr"
+    },
+    "missions":{
+        "titre":"titre_fr",
+        "desc" :"description_fr"
+    }, 
+    "projets":{
+        "titre":"titre_fr",
+        "desc" :"description_fr"
+    },
+    "success":{
+        "ligne1":"ligne1_fr",
+        "ligne2":"ligne2_fr",
+        "ligne3":"ligne3_fr",
+        "ligne4":"ligne4_fr"
+    },
+    "team":{
+        "ligne1":"Notre équipe dirigeante, aux expériences riches et complémentaires porte les mêmes valeurs :",
+        "ligne2":"Diversité, transparence, collaboration, résultat et bien collectif.",
+        "bio":"bio_fr"
+    }, 
+    "memberprofil":{
+        "team_bio":"team_bio_fr",
+        "description":"description_fr",
+        "parcours":"parcours_fr",
+        "linkedin":"Votre Profil LinkedIn",
+        "video":"Vidéos : ",
+        "descrip":"Déscription : "
+    },
+    "joinus":{
+        "titre":"titre_fr",
+        "desc" :"description_fr"
+    },
+    "cotisation":{
+        "payement":"Mode de règlement",
+        "mmbre":"Catégorie de membre",
+        "cot":"Contribution",
+        "scot":"Support contribution*",
+        "catmembre":"Categorie_membre_fr",
+        "req":"Remarques_fr"
+    },
+    "partenaires":{
+        "type":"type_fr"
+    },
+    "events":{
+        "titre": "titre_fr",
+        "thematique" :"thematique_fr",
+        "post" : "post_fr",
+        "plus" : "Plus"   
+    },
+    "services":{
+        "type":"intitule_fr",
+        "titre":"nom_fr",
+        "desc":"description_fr",
+        "avantage":"Avantages_members_fr",
+        "av_title":"Avantages Membres"
+    },
+    "quisomme":{
+        "description":"description_mnc_fr",
+        "nb1":"Projets accompagnés",
+        "nb2":"Partenariats internationaux",
+        "nb3":"Membres",
+        "nb4":"Évènements réalisés",
+        "nb5":"Millions d'investissement réalisés",
+        "pls":"Plus de "
+    },
+    "footer":{
+        "mnc":"MNC est une structure à gouvernance mixte public-privé qui promeut l'innovation digitale.",
+        "insc":"Inscrivez-vous à notre newsletter pour rester à jour avec les actualités de MNC",
+        "insc_title":"inscrivez-Vous :",
+        "btn_insc":"s'inscrire",
+        "cnt_title":"Contactez Nous :",
+        "news":"Actualités :",
+        "copy":" MNC. Tous droits réservés.",
+        "whosus":"Qui sommes nous?",
+        "m":"médiathèque",
+        "done":"Merci pour votre inscription",
+        "notdone":"Cet email est déja inscrit"
+    },
+    "contact":{
+        "adresse":"adresse_fr"
+    },
+    "search":{
+        "msg":"Pas de résultats"
+    },
+    "fiware":{
+        "titre":"Titre_fr",
+        "hint":"hint_fr",
+        "desc" :"Description_fr",
+        "homedesc":"est une communauté open source indépendante qui vise à construire un écosystème ouvert et durable autour de normes de plateforme logicielle publiques, libres de droits et axées sur la mise en œuvre qui stimuleront le développement de nouvelles applications intelligentes"
+
+      },
+      "program":{
+        "titre":"titre_fr",
+        "hint":"hint_fr",
+        "desc" :"description_fr"
+      },
+      "fiwarecomponents":{
+        "titre":"titre_fr",
+        "desc" :"description_fr"
+      },
+      "fiwaresectors":{
+        "label":"label_fr"
+      },
+      "fiwareprogram":{
+        "desc" :"description_fr"
+      },
+      "adhesionForm":{
+        "form1":{
+            "h2": "Nom d'Organisme et Parrainage",
+            "nom": "Nom de l'entreprise",
+            "nomSponsor": "Nom du sponsor",
+            "organisation":"organisation",
+            "fonction": "Fonction" ,     
+            "t1": "L’organisme adhérant doit être parrainé par un membre du cluster"
+          },
+          "form2":{
+              "h2": "Contacts dans votre organisme",
+              "t1": "Contact pour Maroc Numeric Cluster (précisez l’interlocuteur principal pour les réunions, la participation aux projets, le référent sur les sujets liés au Cluster…)",
+              "NomPrenom": "Nom et prenom",
+              "fonction": "Fonction",
+              "phone":"Numéro du Téléphone",
+              "fax": "Fax",
+              "email":"E-mail",
+              "t2": "Responsable administratif (Cotisation, effectifs, chiffre d’affaires, renseignements généraux…)",
+              "t3": "Responsable légal si différent du responsable administratif (Participation aux assemblées générales…)"             
+  
+          },
+          "Form3":{
+              "h2": "Fiche d’identité de votre organisme",
+              "t1": "Sélectionnez le type d’organisme",
+              "org1": "Entreprise TIC",
+              "org2": "Association",
+              "org3": "Institutionnel",
+              "org4": "Institut de recherche",
+              "org5": "Institut d’enseignement",
+              "org6": "Autre",
+              "t2": "Si autre, veuillez spécifier le type :", 
+              "specifier" : "spécifier",
+              "t3": "Localisation du siège social :",
+              "adresse": "Adresse  :",
+              "code": "Code postal :",
+              "ville": "Ville :",
+              "lien": "Lien Web :",
+              "creation": "Année de création :",
+              "effectif": "Effectif global :", 
+              "capital": "Chiffre d’affaire en DH (2018 et 2019) :",
+              "formelegal": "Forme juridique :",
+              "registreC": "N° Registre du Commerce :",
+              "patente": "N° Patente :",
+              "idFiscal": "Identifiant Fiscal :",
+              "t4": "Décrivez le cœur de métier de votre entreprise et les marchés cibles. Ce texte peut être destiné à être publié dans les différents supports : newsletter du Cluster, site web, annuaire...",
+              "activite": "Activité  :",
+              "t5": "J’autorise la publication de ce texte sur le support de communication du Cluster (Site Web, Newsletter…)",
+              "oui": "Oui",
+              "non": "Non"
+          },
+          "Form4":{
+              "h2": "Liens avec Maroc Numeric Cluster",
+              "t1": "Avec quelles commissions thématiques souhaiteriez-vous interagir ?",
+              "theme1": "Entreprise Digitale",
+              "theme2": "Big Data",
+              "theme3": "Smart City",
+              "theme4": "Smart Education",
+              "theme5": "Multicanal",
+              "theme6": "Multimédia",
+              "theme7": "Internet Of Things",
+              "theme8": "Security & Cloud",
+              "theme9": "Mobile",
+              "attenteMNC": "Attentes vis-à-vis de Maroc Numeric Cluster",
+              "attente": "Attentes  :"
+          },
+          "Form5": {
+              "h2": "Règlement des cotisations",
+              "t1": "Cotisations à régler : Veuillez détailler les cotisations à régler",
+              "cotisation": "COTISATION",
+              "montant": "MONTANT DH",
+              "cotisation1": "Cotisation membre 2020",
+              "cotisation2": "Cotisation membre de soutien 2020",
+              "cotisation3": "Avance sur cotisation membre 2021",
+              "cotisation4": "Avance sur cotisation membre de soutien 2021",
+              "cotisation5": "Don supplémentaire"
+          },
+          "Form6":{
+              "h2": "Mode de règlement et Engagement de l’organisme",
+              "t1": "Copie scannée de l’ordre de virement :*",
+              "t2": "Copie du registre de commerce de l’organisme adhérent :*",
+              "t3": "Copie de la CIN du dirigeant de l’organisme adhérent :*",
+              "date": "Date de la demande",
+              "nomOrg": "Nom de l'organisme",
+              "nomPr": "Nom du représentant légal"
+          },
+          "Form7":{
+              "h2": "Confirmation de l'adhésion",
+              "t1": "En cliquent sur confimer, vous agréer à nos termes d'utilisation"
+          },
+          "error":{
+              "msgreq":"Le champ est requis",
+              "msgminleng":"Le champ doit comporter au moins 3 caractères.",
+              "msginvalid":"le champ est invalid"
+          },
+          "valid":{
+              "next": "Suivant",
+              "back":"Précédant",
+              "submit":"Soumettre"
+          }
+  ,
+    "candidature":{
+        "firstname":"Entrez votre Prénom",
+        "lastname":"Entrez votre Nom",
+        "civilite":"Civilité",
+        "madame":"Madame",
+        "monsieur":"Monsieur",
+        "civilite1":"Veuillez choisir une civilité",
+        "email":"Entrez votre Email",
+        "objet":"Objet",
+        "embauche":"Embauche",
+        "internship1":"Stage PFA",
+        "internship2":"Stage PFE",
+        "objet1":"Veuillez choisir un objet",
+        "lettremotivation":"Lettre de motivation:"
+    
+    }
+      }
+      ,
+      "candidature":{
+          "firstname":"Entrez votre Prénom",
+          "lastname":"Entrez votre Nom",
+          "civilite":"Civilité",
+          "madame":"Madame",
+          "monsieur":"Monsieur",
+          "civilite1":"Veuillez choisir une civilité",
+          "email":"Entrez votre Email",
+          "objet":"Objet",
+          "embauche":"Embauche",
+          "internship1":"Stage PFA",
+          "internship2":"Stage PFE",
+          "objet1":"Veuillez choisir un objet",
+          "lettremotivation":"Lettre de motivation:"
+      
+      },
+      "carrer":{
+          "msgs":"Votre demande a été enregistrée, Merci pour votre candidature",
+          "back":"Retour à l'accueil",
+          "msge":"Votre demande n'est pas enregistrée, veuillez actualiser la page et réessayer",
+          "refresh":"Actualiser"
+
+      },
+      "load":"Chargement en cours ",
+      "media":{
+        "name":"name_fr"
+    }
+    ,
+    "prog":{
+        "t1":"CONSULTER NOS PROGRAMMES",
+        "t2":"C'EST QUOI FIWARE?",
+        "t3":"LES COMPOSANTS DE FIWARE",
+        "t4":"DOMAINES COUVERTS PAR FIWARE"
+    },
+    "captcha":{
+        "d":"Entrez les chiffres ci-dessous.",
+        "b":"Soumettre",
+        "r":"Actualiser",
+        "c":"Nombres"
+
+    }
+}

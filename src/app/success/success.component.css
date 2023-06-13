@@ -1,0 +1,42 @@
+#success {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+img {
+  width: 80%;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+  font-size: 30px;
+  border-radius: 50%;
+  border: solid white;
+  color: white;
+  line-height: 2em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  display: inline-block;
+  transition: 0.5s;
+}
+.icon1 {
+  background-color: #4472c4;
+}
+.icon2 {
+  background-color: #ed7d31;
+}
+.icon3 {
+  background-color: #a5a5a5;
+}
+.icon4 {
+  background-color: #ffc000;
+}
+@media screen and (max-width: 360px) {
+  .icon1,
+  .icon2,
+  .icon3,
+  .icon4 {
+    font-size: 20px;
+  }
+}

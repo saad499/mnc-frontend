@@ -1,0 +1,112 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Montserrat;
+  src: url(assets/fonts/Montserrat/Montserrat-Regular.ttf) format("opentype");
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  color: #222;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  border: none;
+  /*color: black;*/
+}
+.button {
+  background-color: #18a0db;
+  border: 1px rgb(255, 255, 255) solid;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem !important;
+}
+.button:hover {
+  background-color: #313d42;
+}
+#avsty p strong {
+  color: #18a0db;
+  font-size: 15px;
+}
+#avsty p strong::before {
+  content: "|";
+  color: #2f4050;
+  margin-right: 5px;
+}
+
+#avstys p strong {
+  color: #e1774a;
+  font-size: 15px;
+}
+#avstys{
+    background-color: #dee1e2;
+    border-left: #18a0db 3px solid;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#avstys h2 {
+  color: #e1774a;
+}
+#avstys p strong::before {
+  content: "|";
+  color: #2f4050;
+  margin-right: 5px;
+}
+#descsty ul li {
+  list-style: none;
+}
+#descsty {
+  background-color: #dee1e2;
+  border-left: #18a0db 3px solid;
+  color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#descsty b {
+  color: #18a0db;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#descsty ul li::before {
+  content: "-";
+  margin-right: 16px;
+}
+#avsty ul li {
+  list-style: none;
+}
+#avsty ul li::before {
+  content: "-";
+  margin-right: 6px;
+}
+.mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+  background-color: #18a0db !important;
+  color: #fff !important;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f0f0f0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bdbbbb;
+}

@@ -1,0 +1,30 @@
+.BG {
+    height: 120px;
+    max-width: 100%;
+    background: url("../../assets/images/backgrounds/title.jpg");
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden !important;
+    color: #fff;
+  }
+  span {
+    color: #18a0db;
+  }
+  h3{
+    color: #18a0db;
+  }
+  #avsty p strong {
+    color: #18a0db;
+    font-size: 15px;
+}
+  .description{
+    color: red;
+  }
+  div .span{
+    color: red;
+  }
+
+ 

@@ -1,0 +1,38 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+name: 'mnc-front'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm uninstall -g @angular/cli
+    npm install -g @angular/cli@11.1.2 && npm config set strict-ssl false
+    npm -g i gzip-all
+    npm install --force
+    npm audit fix --force
+    ng build --prod
+    ng version
+  displayName: 'npm install and build'
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)/dist'
+    Contents: '**/*'
+    TargetFolder: '$(build.artifactstagingdirectory)/dist'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: dist

@@ -1,0 +1,74 @@
+/* img {
+  width: 100%;
+  height: auto;
+}
+.mission {
+  min-height: 120px;
+  height: 100%;
+}
+.box {
+  min-height: 120px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box h3 {
+  width: 100%;
+  font-size: 2rem;
+}
+.box h3::before {
+  content: "|";
+  opacity: 0.4;
+  margin-right: 10px;
+}
+.box p {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .box h3 {
+    font-size: 1.4rem;
+  }
+  .box p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .box h3 {
+    font-size: 0.8rem;
+  }
+  .box p {
+    font-size: 0.6rem;
+  }
+  .box h3::before {
+    margin-right: 3px;
+  }
+} */
+
+#projects {
+  border: 0.5px #ece8e8da solid;
+  min-height: 400px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.iconetab {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+#avmbtitle {
+  color: #2f4050;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}
+.servimage {
+  width: 100%;
+  margin-bottom: 10px;
+}
+::ng-deep .mat-ink-bar {
+  background-color: #18a0db !important;
+}

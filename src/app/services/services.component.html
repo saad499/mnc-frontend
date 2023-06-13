@@ -1,0 +1,38 @@
+<app-title [title]="'navbar.expertise.services' | translate"></app-title>
+<div  class="services" *ngIf="this.typeservices">
+  <div *ngFor="let t of this.typeservices;let i = index" id="{{this.dynamicurl(t['intitule_fr'])}}">
+    <h4 class="title">{{t['services.type' | translate]}}</h4>
+      <div class="container" id="servicess">
+        <mat-tab-group [(selectedIndex)]="selectedIndex[i]"  style="display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;">
+            <mat-tab  *ngFor="let service of t.services" >
+              <ng-template mat-tab-label  >
+               <img src="{{this.serv.host+service.icon?.url}}" alt="icon" class="iconetab">
+                {{service['services.titre' | translate]}}
+              </ng-template>
+              <div class="container mt-3">
+                <div class="row justify-content-around">
+                  <div class="col-md-6 col-12  my-auto ">
+                    <div [innerHTML]="service['services.desc' | translate]| MarkdownToHtml" id="descsty"></div>
+                    <img src="{{this.serv.host+service.image?.url}}" alt=""  class="servimage">
+                  </div>
+                  <div class="col-md-6 col-12 servstl">
+                      <h5 id="avmbtitle">{{'services.av_title' | translate}}</h5>
+                    <div [innerHTML]="service['services.avantage' | translate]| MarkdownToHtml" id="avsty"></div>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+        </mat-tab-group>
+        </div>
+    </div>
+  </div>
+  <ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>

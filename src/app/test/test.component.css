@@ -1,0 +1,252 @@
+/*
+.BG {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+*/
+/* Centered text */
+/*.centered {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centerText{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+  }
+
+
+
+
+.missions .icon-box {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    transition: all ease-in-out 0.3s;
+    width: 100%;
+    background: #fefefe;
+    box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
+    border-radius: 18px;
+    border-bottom: 5px solid #fff;
+  }
+
+  .missions .icon-box .icon {
+    width: 80px;
+    height: 80px;
+    background: #f1f1f1;;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: ease-in-out 0.3s;
+    color: #fff;
+    border-color: #18a0db;
+  }
+
+  .missions .icon-box .icon i {
+    font-size: 28px;
+    border-width: 20px;
+
+  }
+
+  .missions .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+
+  .missions .icon-box h4 a {
+    color: #282828;
+    transition: ease-in-out 0.3s;
+  }
+  .st{
+    color: #18a0db;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  p{
+    font-size: 15px;
+  }
+
+
+  .missions .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .missions .icon-box:hover {
+    transform: translateY(-10px);
+    border-color: #18a0db;
+  }
+
+  .missions .icon-box:hover h4 a {
+    color: #18a0db;
+  }
+  */
+
+/*
+  Theme Name: Avilon
+  Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+  Author: BootstrapMade.com
+  License: https://bootstrapmade.com/license/
+*/
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: #fff;
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: #1dc8cd;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #1dc9ce;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Product Advanced Featuress Section
+  --------------------------------*/
+#advanced-features .features-row {
+  padding: 60px 0 30px 0;
+}
+
+#advanced-features h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #707070;
+}
+
+#advanced-features h3 {
+  text-align: center;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: Montserrat;
+  color: #a9a9a9;
+}
+
+#advanced-features p {
+  line-height: 24px;
+  color: #777;
+  margin-bottom: 30px;
+  font-family: Montserrat;
+  color: #a9a9a9;
+}
+
+#advanced-features i {
+  color: #666666;
+  font-size: 64px;
+  font-family: Montserrat;
+  transition: 0.5s;
+  float: left;
+  padding: 0 15px 0px 0;
+  line-height: 1;
+}
+
+#advanced-features i:before {
+  background: #1dc8cd;
+  background: linear-gradient(45deg, #1dc8cd 0%, #55fabe 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#advanced-features .advanced-feature-img-right {
+  max-width: 100%;
+  float: right;
+  padding: 0 0 30px 30px;
+}
+
+#advanced-features .advanced-feature-img-left {
+  max-width: 100%;
+  float: left;
+  padding: 0 30px 30px 0;
+}
+
+@media (max-width: 768px) {
+  #advanced-features .advanced-feature-img-right,
+  #advanced-features .advanced-feature-img-left {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  #advanced-features .advanced-feature-img-right,
+  #advanced-features .advanced-feature-img-left {
+    max-width: 100%;
+    float: none;
+    padding: 0 0 30px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  h1,
+  h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .top-content .carousel-caption {
+    bottom: 20px;
+  }
+
+  .top-content .carousel-indicators {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .top-content .carousel-caption {
+    bottom: 0;
+    padding-bottom: 20px;
+  }
+
+  .top-content .carousel-caption-description {
+    display: none;
+  }
+
+  .top-content h1,
+  .top-content h2,
+  .top-content h3 {
+    font-size: 18px;
+  }
+}

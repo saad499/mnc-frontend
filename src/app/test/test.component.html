@@ -1,0 +1,8 @@
+<div class="container">
+<form [formGroup]="userForm">
+    <input type="file" name="file" id="file" formControlName="file1" (change)="onFileChange($event,1)">
+    <input type="file" name="file" id="file" formControlName="file2" (change)="onFileChange($event,2)">
+    <input type="text" name="text" formControlName="name">
+    <button (click)="submit()">DO</button>
+</form>
+</div>

@@ -1,0 +1,37 @@
+<app-title [title]="'navbar.cluster.mission' | translate"></app-title>
+<div class="container" id="missions">
+  <div class="row">
+    
+    <div class="col-md-6 col-xs-12 box">
+      <img src="../../assets/images/logo_footer.png" alt="" data-aos="fade-right" data-aos-once="true">
+    </div>
+    <div class="col-md-6 col-xs-12 text-center my-auto " data-aos="fade-up" data-aos-once="true">
+      <h3>{{'home_actualite.mnc' | translate}}</h3>
+      <div *ngIf="mnc_data" innerHtml="{{mnc_data[('quisomme.description') | translate] | MarkdownToHtml}}">
+      </div>
+    </div>
+    <div class="mission col-12 row h-100" *ngFor="let mission of this.missions">
+      <div class="col-6 text-center align-items-center box" *ngIf="this.missions.indexOf(mission)%2==1">
+        <img src="{{this.service.host + mission.image.url}}" alt="" data-aos="fade-left">
+      </div>
+      <div class="col-6 text-center my-auto box" data-aos="fade-up" *ngIf="this.missions.indexOf(mission)%2==1">
+        <h3>{{mission['missions.titre' | translate]}}</h3>
+        <p>{{mission['missions.desc' | translate]}}</p>
+      </div>
+      <div class="col-6 text-center my-auto box" data-aos="fade-up" *ngIf="this.missions.indexOf(mission)%2==0">
+        <h3>{{mission['missions.titre' | translate]}}</h3>
+        <p>{{mission['missions.desc' | translate]}}</p>
+      </div>
+      <div class="col-6 text-center my-auto box" *ngIf="this.missions.indexOf(mission)%2==0">
+        <img src="{{this.service.host + mission.image.url}}" alt="" data-aos="fade-left">
+      </div>
+    </div>
+  </div>
+</div>
+<ngx-spinner
+  bdColor="rgba(255, 255, 255, 0.9)"
+  size="large"
+  color="#18a0db"
+  type="ball-clip-rotate-pulse">
+  <p style="font-size: 20px; color: #18a0db;margin-top: 50px;">{{'load' | translate}}...</p>
+</ngx-spinner>
