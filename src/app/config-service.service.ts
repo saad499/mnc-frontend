@@ -8,7 +8,6 @@ import { MemeberProfil } from './models/memberprofil';
 })
 export class ConfigServiceService {
   host = environment.host;
-  private baseUrl = "http://localhost:9252/member-profils";
   constructor(private http:HttpClient) {
 
    }
@@ -26,12 +25,6 @@ export class ConfigServiceService {
     return this.http.post(environment.host+url,data,h);
    }
 
-   getMemberProfilList():Observable<MemeberProfil[]>{
-    return this.http.get<MemeberProfil[]>(`${this.baseUrl}`);
-   }
 
 
-   getMemberProfilById(id: number):Observable<MemeberProfil>{
-    return this.http.get<MemeberProfil>(`${this.baseUrl}/${id}`);
-   }
 }

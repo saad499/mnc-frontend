@@ -14,7 +14,7 @@ export class TeamComponent implements OnInit {
 icone =faLinkedin;
 team:any;
 
-memberProfil:MemeberProfil[]=[];
+memberProfil:any;
   constructor(private service:ConfigServiceService,private spinner: NgxSpinnerService, private router: Router) { }
 
   ngOnInit(): void {
@@ -27,8 +27,7 @@ memberProfil:MemeberProfil[]=[];
   }
 
   private getMemberProfil(){
-    this.service.getMemberProfilList().subscribe(
-      (data: MemeberProfil[]) => {
+    this.service.get("/member-profils").subscribe(data => {
         console.log(data);
         this.memberProfil = data;
       },

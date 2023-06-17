@@ -12,8 +12,9 @@
     </div>
     <div class="row">
         <div class="col-lg-4 col-md-6 col-xs-12 text-center box" *ngFor="let memberProfils of memberProfil" data-aos="fade-up" data-aos-once="true">
-            <a [routerLink]="'/memberProfil/' + memberProfils.id"><img [src]="this.service.host + memberProfils.photo?.url" alt="Photo"></a>
+            <a [routerLink]="'/memberProfil/' + memberProfils.id"><img [src]="this.service.host + memberProfils.photo?.url" alt="Photo">
             <h4>{{memberProfils.nom}} {{memberProfils.prenom}}</h4>
+        </a>
             <h5>{{memberProfils['memberprofil.team_bio' | translate]}}</h5>
             <a href="{{memberProfils.linkedin_url}}" target="_blank">
                 <fa-icon [icon]="icone"></fa-icon> Linkedin

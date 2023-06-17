@@ -15,7 +15,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class MemberProfilComponent implements OnInit {
 
-  memberProfil:any;
+  memberProfil:any |undefined;
   currentobj:any;
   img = faImage;
   vd = faVideo;
