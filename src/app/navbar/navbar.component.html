@@ -20,7 +20,7 @@
                 <li><a class="dropdown-item forcklick" routerLink="/our-organization">{{'navbar.cluster.organisation' | translate}}</a></li>
             </ul>
         </li>
-        <li class="nav-item dropdown ms-1">
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.expertise.title' | translate}}</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item forcklick" routerLink="/our-services">{{'navbar.expertise.services' | translate}}</a></li>
@@ -29,14 +29,14 @@
                 <li><a class="dropdown-item forcklick" routerLink="/fiware">{{'navbar.expertise.Fiware' | translate}}</a></li>
             </ul>
         </li>
-        <li class="nav-item dropdown ms-1">
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >{{'navbar.partentaires.title' | translate}}</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" *ngIf="partenaires">
                 <li *ngFor="let p of partenaires"><a class="dropdown-item forcklick" routerLink="/partners" fragment="{{genereurl(p['type_fr'])}}">{{p['partenaires.type' | translate]}}</a></li>
 
             </ul>
         </li>
-        <li class="nav-item dropdown ms-1">
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.rejcluster.title' | translate}}</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item forcklick" routerLink="/why-join-us">{{'navbar.rejcluster.pq' | translate}}</a></li>
@@ -47,16 +47,15 @@
             </ul>
         </li>
 
-        <li class="nav-item dropdown ms-1">
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.actualites.title' | translate}}</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              
                 <li><a class="dropdown-item forcklick" routerLink="/events">{{'navbar.actualites.event' | translate}}</a></li>
                 <li><a class="dropdown-item forcklick" routerLink="/media">{{'navbar.actualites.media' | translate}}</a></li>
             </ul>
         </li>
 
-        <li class="nav-item dropdown ms-1">
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.lang.title' | translate}} : <img src="{{langg}}" style="width: 20px;"></a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item forcklick" (click)="this.switchlang('fr')"><img src="../../assets/images/icones/fr.png" style="width: 30px;"></a></li>
@@ -74,7 +73,7 @@
                     <form class="d-flex ms-auto">
                         <input class="search-input empt" type="search" placeholder="&#xF002;" aria-label="Search"
                                     autocomplete="off" (keyup.enter)="search()" id="searchh">
-                            <a type="button" class="button-lang forcklick ms-2" routerLink="/adhesion">{{'navbar.joinbutton' | translate}}</a>
+                            <a type="button" class="button-lang forcklick" routerLink="/adhesion">{{'navbar.joinbutton' | translate}}</a>
                     </form>
                 </li>
             </ul>

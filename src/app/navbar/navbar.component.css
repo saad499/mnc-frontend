@@ -52,7 +52,7 @@
   border-bottom: 1px solid #d6d6d6;
   font-size: 0.75rem !important;
   padding: 5px;
-  margin-right: 5px;
+ 
   width: auto;
 }
 .search-input::-webkit-input-placeholder {
@@ -88,11 +88,9 @@
   .search-input{
     width: 40%;
     margin-bottom: 8px;
-    margin-left: 12px;
   }
   .button-lang{
     width: 40%;
     margin-bottom: 25px;
   }
-
 }
