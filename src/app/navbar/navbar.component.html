@@ -1,27 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <!-- Éléments alignés à gauche -->
-    <a class="navbar-brand justify-content-start" style="margin-right: 10px;" routerLink="/"><img src="../../assets/images/logo.png" class=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" style="margin-right: -10px;" routerLink="/"><img src="../../assets/images/logo.png" class=""></a>
+    <button class="navbar-toggler ml-auto justify-content-end align-items-start" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <!-- Éléments alignés au centre -->
-    <div class="navbar-collapse justify-content-center collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-            <a routerLink="/" class="nav-link forcklick">{{'navbar.home' | translate}}</a>
+    <div class="navbar-collapse justify-content-center collapse col-lg-8 col-md-12" style="margin-top: 62px;" id="navbarNav">
+     <ul class="navbar-nav justify-content-center">
+        <li class="nav-item" style="margin-right: -6px;">
+           <b> <a routerLink="/" class="nav-link forcklick">{{'navbar.home' | translate}}</a></b>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.cluster.title' | translate}}</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li class="nav-item dropdown" style="margin-right: -6px;">
+            <b><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.cluster.title' | translate}}</a>
+            </b><ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item forcklick" routerLink="/missions">{{'navbar.cluster.mission' | translate}}</a></li>
                 <li><a class="dropdown-item forcklick" routerLink="/our-deffinition-of-success">{{'navbar.cluster.succes' | translate}}</a></li>
                 <li><a class="dropdown-item forcklick" routerLink="/our-team">{{'navbar.cluster.team' | translate}}</a></li>
                 <li><a class="dropdown-item forcklick" routerLink="/our-organization">{{'navbar.cluster.organisation' | translate}}</a></li>
             </ul>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.expertise.title' | translate}}</a>
+        <li class="nav-item dropdown" style="margin-right: -6px;">
+            <b>
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.expertise.title' | translate}}</a>
+            </b>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item forcklick" routerLink="/our-services">{{'navbar.expertise.services' | translate}}</a></li>
                 <li><a class="dropdown-item forcklick" routerLink="/our-projects">{{'navbar.expertise.project' | translate}}</a></li>
@@ -29,34 +31,40 @@
                 <li><a class="dropdown-item forcklick" routerLink="/fiware">{{'navbar.expertise.Fiware' | translate}}</a></li>
             </ul>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >{{'navbar.partentaires.title' | translate}}</a>
+        <li class="nav-item dropdown" style="margin-right: -6px;">
+            <b>
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >{{'navbar.partentaires.title' | translate}}</a>
+            </b>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" *ngIf="partenaires">
                 <li *ngFor="let p of partenaires"><a class="dropdown-item forcklick" routerLink="/partners" fragment="{{genereurl(p['type_fr'])}}">{{p['partenaires.type' | translate]}}</a></li>
-
             </ul>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.rejcluster.title' | translate}}</a>
+        <li class="nav-item dropdown" style="margin-right: -6px;">
+            <b>
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.rejcluster.title' | translate}}</a>
+            </b>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item forcklick" routerLink="/why-join-us">{{'navbar.rejcluster.pq' | translate}}</a></li>
                 <li><a class="dropdown-item forcklick" routerLink="/contribution">{{'navbar.rejcluster.bc' | translate}}</a></li>
                 <li><a class="dropdown-item forcklick" routerLink="/adhesion">{{'navbar.rejcluster.formad' | translate}}</a></li>
                 <li><a class="dropdown-item forcklick" routerLink="/career">{{'navbar.rejcluster.carr' | translate}}</a></li>
-
             </ul>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.actualites.title' | translate}}</a>
+        <li class="nav-item dropdown" style="margin-right: -8px;">
+            <b>
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.actualites.title' | translate}}</a>
+            </b>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item forcklick" routerLink="/events">{{'navbar.actualites.event' | translate}}</a></li>
                 <li><a class="dropdown-item forcklick" routerLink="/media">{{'navbar.actualites.media' | translate}}</a></li>
             </ul>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.lang.title' | translate}} : <img src="{{langg}}" style="width: 20px;"></a>
+        <li class="nav-item dropdown" style="margin-right: -6px;">
+            <b>
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{'navbar.lang.title' | translate}} : <img src="{{langg}}" style="width: 20px;"></a>
+            </b>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item forcklick" (click)="this.switchlang('fr')"><img src="../../assets/images/icones/fr.png" style="width: 30px;"></a></li>
                 <li><a class="dropdown-item forcklick" (click)="this.switchlang('en')"><img src="../../assets/images/icones/en.png" style="width: 30px;"></a></li>
@@ -66,9 +74,8 @@
     </div>
   
     <!-- Éléments alignés à droite -->
-    <div class="navbar-collapse justify-content-end collapse" id="navbarNav">
-     
-            <ul class="navbar-nav">
+    <div class="navbar-collapse justify-content-end collapse col-lg-3 col-md-12" id="navbarNav" style="margin-top: 62px;"  >
+           <ul class="navbar-nav">
                 <li class="nav-item">
                     <form class="d-flex ms-auto">
                         <input class="search-input empt" type="search" placeholder="&#xF002;" aria-label="Search"
